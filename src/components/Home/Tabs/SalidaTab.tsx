@@ -1,8 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Box, Text} from 'native-base';
 const SalidaStack = createNativeStackNavigator();
-import Salida from '../../../screen/Salida';
+import SalidaIndex from '../../../screen/Salida/Index';
 
 const SalidaTab = () => {
   return (
@@ -10,8 +9,8 @@ const SalidaTab = () => {
       screenOptions={{
         headerShown: false,
       }}
-      initialRouteName="DefaultSalidaScreen">
-      <SalidaStack.Screen name="DefaultSalidaScreen" component={Salida} />
+      initialRouteName="salida.index">
+      <SalidaStack.Screen name="salida.index" component={SalidaIndex} />
       {/*add more screen with bottom tabs here*/}
     </SalidaStack.Navigator>
   );

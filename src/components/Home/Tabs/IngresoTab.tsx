@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import {Box, Text} from 'native-base';
-import Ingreso from '../../../screen/Ingreso';
+import IngresoIndex from '../../../screen/Ingreso/Index';
 const IngresoStack = createNativeStackNavigator();
 
 const IngresoTab = () => {
@@ -9,10 +9,12 @@ const IngresoTab = () => {
   //   <Text>Ingreso</Text>
   // </Box>;
   return (
-    <IngresoStack.Navigator screenOptions={{
-      headerShown: false,
-    }} initialRouteName="DefaultIngresoScreen">
-      <IngresoStack.Screen name="DefaultIngresoScreen" component={Ingreso} />
+    <IngresoStack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }} initialRouteName="ingreso.index"
+    >
+      <IngresoStack.Screen name="ingreso.index" component={IngresoIndex} />
       {/*add more screen with bottom tabs here*/}
     </IngresoStack.Navigator>
   );

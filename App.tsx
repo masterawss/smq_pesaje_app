@@ -46,6 +46,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // }
 import LoginScreen from './src/screen/Login';
 import HomeScreen from './src/screen/Home';
+import IngresoCreateScreen from './src/screen/Ingreso/Create';
 
 const Stack = createNativeStackNavigator();
 
@@ -54,12 +55,13 @@ const App = () => {
     <NativeBaseProvider>
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Home"
+          initialRouteName="home"
           screenOptions={{
             headerShown: false,
           }}>
-          <Stack.Screen name="Login" component={LoginScreen} />
-          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="login" component={LoginScreen} />
+          <Stack.Screen name="home" component={HomeScreen} />
+          <Stack.Screen name="ingreso.create" component={IngresoCreateScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>

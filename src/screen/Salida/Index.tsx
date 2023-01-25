@@ -1,11 +1,11 @@
 /* eslint-disable prettier/prettier */
 import {Box, Text} from 'native-base';
 
-const Ingreso = () => {
+const SalidaIndex = () => {
   return (
     <Box safeArea>
-      <Text>Ingreso</Text>
+      <Text>Salida</Text>
     </Box>
   );
 };
-export default Ingreso;
+export default SalidaIndex;
