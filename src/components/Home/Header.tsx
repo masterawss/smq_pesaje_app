@@ -2,7 +2,15 @@ import {Box, HStack, Text} from 'native-base';
 
 const Header = ({image, title}: any) => {
   return (
-    <Box bgColor="primary.600" p={3}>
+    <Box
+      p={3}
+      bg={{
+        linearGradient: {
+          colors: ['lightBlue.300', 'violet.800'],
+          start: [0, 2],
+          end: [1, 0],
+        },
+      }}>
       <HStack space={2} justifyContent="space-between">
         <Box>
           <Text color="white" fontSize={15} pb={5}>

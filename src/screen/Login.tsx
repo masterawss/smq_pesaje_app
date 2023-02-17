@@ -34,6 +34,7 @@ const Login = () => {
         <Center>
           <Box minW={300} maxW="100%">
             <Image
+              alt="asd"
               source={img}
               width={200}
               height={200}

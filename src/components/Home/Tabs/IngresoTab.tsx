@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Box, Text} from 'native-base';
 import IngresoIndex from '../../../screen/Ingreso/Index';
+
 const IngresoStack = createNativeStackNavigator();
 
 const IngresoTab = () => {

@@ -47,12 +47,19 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import LoginScreen from './src/screen/Login';
 import HomeScreen from './src/screen/Home';
 import IngresoCreateScreen from './src/screen/Ingreso/Create';
+import IngresoShowScreen from './src/screen/Ingreso/Show';
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
+  const config = {
+    dependencies: {
+      'linear-gradient': require('react-native-linear-gradient').default,
+    },
+  };
+
   return (
-    <NativeBaseProvider>
+    <NativeBaseProvider config={config}>
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="home"
@@ -62,6 +69,7 @@ const App = () => {
           <Stack.Screen name="login" component={LoginScreen} />
           <Stack.Screen name="home" component={HomeScreen} />
           <Stack.Screen name="ingreso.create" component={IngresoCreateScreen} />
+          <Stack.Screen name="ingreso.show" component={IngresoShowScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>
